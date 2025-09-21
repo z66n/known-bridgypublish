@@ -1,0 +1,11 @@
+{
+    "name": "Webmentions",
+    "version": "1.0.0",
+    "devDependencies": {
+        "grunt": "^1.6.1",
+        "grunt-cli": "^1.5.0"
+    },
+    "scripts": {
+        "grunt": "grunt"
+    }
+}

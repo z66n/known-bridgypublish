@@ -1,0 +1,27 @@
+{
+    "name": "z66n/known-webmentions",
+    "description": "Syndicate via Webmentions.",
+    "type": "known-plugin",
+    "version": "1.0.0",
+    "require": {
+        "php": ">=8.1.0",
+        "composer/installers": "~1.0"
+    },
+    "require-dev": {
+        "z66n/known-language-tools": "^1.0"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/z66n/known-language-tools"
+        }
+    ],
+    "extra": {
+        "installer-name": "Webmentions"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
