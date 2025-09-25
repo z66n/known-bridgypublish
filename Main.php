@@ -1,6 +1,6 @@
 <?php
 
-namespace IdnoPlugins\Webmentions {
+namespace IdnoPlugins\BridgyPublish {
 
     use Idno\Common\Entity;
     use Idno\Common\Plugin;
@@ -14,7 +14,7 @@ namespace IdnoPlugins\Webmentions {
 
             \Idno\Core\Idno::site()->language()->register(
                 new \Idno\Core\GetTextTranslation(
-                    'webmentions', dirname(__FILE__) . '/languages/'
+                    'bridgypublish', dirname(__FILE__) . '/languages/'
                 )
             );
         }
@@ -22,38 +22,38 @@ namespace IdnoPlugins\Webmentions {
         function registerPages()
         {
 
-            \Idno\Core\Idno::site()->routes()->addRoute('admin/webmentions/?', 'IdnoPlugins\Webmentions\Pages\Admin');
+            \Idno\Core\Idno::site()->routes()->addRoute('admin/bridgypublish/?', 'IdnoPlugins\BridgyPublish\Pages\Admin');
 
-            \Idno\Core\Idno::site()->template()->extendTemplate('admin/menu/items', 'webmentions/admin/menu');
+            \Idno\Core\Idno::site()->template()->extendTemplate('admin/menu/items', 'bridgypublish/admin/menu');
 
         }
 
         function registerEventHooks()
         {
-            \Idno\Core\Idno::site()->syndication()->registerService('webmentions', function() {
-                return $this->hasWebmentions();
+            \Idno\Core\Idno::site()->syndication()->registerService('bridgypublish', function() {
+                return $this->hasBridgyPublishTargets();
             }, array('article', 'bookmark', 'image', 'media', 'place'));
 
-            if ($this->hasWebmentions()) {
-                if (!empty(\Idno\Core\Idno::site()->config()->webmention_syndication)) {
-                    foreach(\Idno\Core\Idno::site()->config()->webmention_syndication as $hook) {
-                        if (!empty($hook['url']))
-                            \Idno\Core\Idno::site()->syndication()->registerServiceAccount('webmentions', $hook['url'], $hook['title']);
+            if ($this->hasBridgyPublishTargets()) {
+                if (!empty(\Idno\Core\Idno::site()->config()->bridgypublish_syndication)) {
+                    foreach(\Idno\Core\Idno::site()->config()->bridgypublish_syndication as $target) {
+                        if (!empty($target['url']))
+                            \Idno\Core\Idno::site()->syndication()->registerServiceAccount('bridgypublish', $target['url'], $target['title']);
                     }
                 }
                 if (\Idno\Core\Idno::site()->session()->isLoggedIn()) {
-                    if (!empty(\Idno\Core\Idno::site()->session()->currentUser()->webmention_syndication)) {
-                        foreach(\Idno\Core\Idno::site()->session()->currentUser()->webmention_syndication as $hook) {
-                            if (!empty($hook['url']))
-                                \Idno\Core\Idno::site()->syndication()->registerServiceAccount('webmentions', $hook['url'], $hook['title']);
+                    if (!empty(\Idno\Core\Idno::site()->session()->currentUser()->bridgypublish_syndication)) {
+                        foreach(\Idno\Core\Idno::site()->session()->currentUser()->bridgypublish_syndication as $target) {
+                            if (!empty($target['url']))
+                                \Idno\Core\Idno::site()->syndication()->registerServiceAccount('bridgypublish', $target['url'], $target['title']);
                         }
                     }
                 }
             }
 
-            $hook_function = function(\Idno\Core\Event $event) {
+            $append_function = function(\Idno\Core\Event $event) {
                 $eventdata = $event->data();
-                if ($this->hasWebmentions()) {
+                if ($this->hasBridgyPublishTargets()) {
                     $object = $eventdata['object'];
                     if ($object instanceof Entity) {
                         // If a specific syndication account is provided, add a targeted link
@@ -73,22 +73,22 @@ namespace IdnoPlugins\Webmentions {
             };
                 
             // Content type with html support
-            \Idno\Core\Idno::site()->events()->addListener('post/article/webmentions', $hook_function);
-            \Idno\Core\Idno::site()->events()->addListener('post/bookmark/webmentions', $hook_function);
-            \Idno\Core\Idno::site()->events()->addListener('post/image/webmentions', $hook_function);
-            \Idno\Core\Idno::site()->events()->addListener('post/media/webmentions', $hook_function);
-            \Idno\Core\Idno::site()->events()->addListener('post/place/webmentions', $hook_function);
+            \Idno\Core\Idno::site()->events()->addListener('post/article/bridgypublish', $append_function);
+            \Idno\Core\Idno::site()->events()->addListener('post/bookmark/bridgypublish', $append_function);
+            \Idno\Core\Idno::site()->events()->addListener('post/image/bridgypublish', $append_function);
+            \Idno\Core\Idno::site()->events()->addListener('post/media/bridgypublish', $append_function);
+            \Idno\Core\Idno::site()->events()->addListener('post/place/bridgypublish', $append_function);
 
         }
 
         /**
-         * Have webmentions been registered in the system?
+         * Have Bridgy Publish webmention targets been registered in the system?
          * @return bool
          */
-        function hasWebmentions()
+        function hasBridgyPublishTargets()
         {
-            if (!empty(\Idno\Core\Idno::site()->config()->webmention_syndication) ||
-                (\Idno\Core\Idno::site()->session()->isLoggedIn() && !empty(\Idno\Core\Idno::site()->session()->currentUser()->webmention_syndication))) {
+            if (!empty(\Idno\Core\Idno::site()->config()->bridgypublish_syndication) ||
+                (\Idno\Core\Idno::site()->session()->isLoggedIn() && !empty(\Idno\Core\Idno::site()->session()->currentUser()->bridgypublish_syndication))) {
                 return true;
             }
             return false;
@@ -97,4 +97,3 @@ namespace IdnoPlugins\Webmentions {
     }
 
 }
-

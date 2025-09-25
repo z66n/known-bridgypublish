@@ -1,0 +1,56 @@
+#: ./Pages/Admin.php:17
+msgid "BridgyPublish"
+msgstr ""
+
+#: ./Pages/Admin.php:41
+msgid "%s doesn't seem to be a valid URL."
+msgstr ""
+
+#: ./templates/default/bridgypublish/admin/home.tpl.php:6
+msgid "Bridgy Publish"
+msgstr ""
+
+#: ./templates/default/bridgypublish/admin/home.tpl.php:9
+msgid "Bridgy Publish lets you syndicate content to external applications using webmentions."
+msgstr ""
+
+#: ./templates/default/bridgypublish/admin/home.tpl.php:13
+msgid "connects your site to platforms such as Bluesky, Mastodon, and others. When syndication is enabled in your post, the plugin automatically inserts hidden links (for example,"
+msgstr ""
+
+#: ./templates/default/bridgypublish/admin/home.tpl.php:15
+msgid ") that Bridgy detects and uses to publish your content to the selected site."
+msgstr ""
+
+#: ./templates/default/bridgypublish/admin/home.tpl.php:18
+msgid "To learn more about Bridgy Publish with webmentions, read the"
+msgstr ""
+
+#: ./templates/default/bridgypublish/admin/home.tpl.php:18
+msgid "Bridgy Help Page"
+msgstr ""
+
+#: ./templates/default/bridgypublish/admin/home.tpl.php:27
+msgid "Create a new Webmention Target"
+msgstr ""
+
+#: ./templates/default/bridgypublish/admin/home.tpl.php:40
+msgid "Name of this Webmention Target"
+msgstr ""
+
+#: ./templates/default/bridgypublish/admin/home.tpl.php:43
+msgid "Webmention Target URL"
+msgstr ""
+
+#: ./templates/default/bridgypublish/admin/home.tpl.php:46
+msgid "Remove this Webmention Target"
+msgstr ""
+
+#: ./templates/default/bridgypublish/admin/home.tpl.php:70
+msgid "Add another Webmention Target"
+msgstr ""
+
+#: ./templates/default/bridgypublish/admin/home.tpl.php:74
+msgid "Save Webmention Targets"
+msgstr ""
+

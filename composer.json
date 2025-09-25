@@ -1,6 +1,6 @@
 {
-    "name": "z66n/known-webmentions",
-    "description": "Syndicate via Webmentions.",
+    "name": "z66n/known-bridgypublish",
+    "description": "Syndicate via Webmentions to Bridgy Publish.",
     "type": "known-plugin",
     "version": "1.0.0",
     "require": {
@@ -17,7 +17,7 @@
         }
     ],
     "extra": {
-        "installer-name": "Webmentions"
+        "installer-name": "BridgyPublish"
     },
     "config": {
         "allow-plugins": {

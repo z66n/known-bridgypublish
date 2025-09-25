@@ -1,1 +1,0 @@
-<li <?php if ($_SERVER['REQUEST_URI'] == '/admin/webmentions/') echo 'class="active"'; ?>><a href="<?php echo \Idno\Core\Idno::site()->config()->getURL()?>admin/webmentions/"><?php echo \Idno\Core\Idno::site()->language()->_('Webmentions'); ?></a></li>
