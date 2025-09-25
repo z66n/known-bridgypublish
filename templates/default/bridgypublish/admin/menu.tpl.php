@@ -1,1 +1,1 @@
-<li <?php if ($_SERVER['REQUEST_URI'] == '/admin/bridgypublish/') echo 'class="active"'; ?>><a href="<?php echo \Idno\Core\Idno::site()->config()->getURL()?>admin/bridgypublish/"><?php echo \Idno\Core\Idno::site()->language()->_('BridgyPublish'); ?></a></li>
+<li <?php if ($_SERVER['REQUEST_URI'] == '/admin/bridgypublish/') echo 'class="active"'; ?>><a href="<?php echo \Idno\Core\Idno::site()->config()->getURL()?>admin/bridgypublish/"><?php echo \Idno\Core\Idno::site()->language()->_('Bridgy Publish'); ?></a></li>
