@@ -8,9 +8,9 @@ Installation
 
 * Drop the BridgyPublish folder into the IdnoPlugins folder of your Known installation.
 * Log into Known and click **Site Configuration**.
-* On the **Site Features** tab, click **Enable** next to BridgyPublish. A **Bridgy Publish**
+* On the **Site Features** tab, click **Enable** next to Bridgy Publish. A **Bridgy Publish**
   entry is added to the site configuration menu.
-* Click **BridgyPublish** in the site configuration menu. Set up your Bridgy Publish webmention target URLs.
+* Click **Bridgy Publish** in the site configuration menu. Set up your webmention target URLs.
 
 Once you have added webmention targets, all site users will be able to syndicate to them.
 
