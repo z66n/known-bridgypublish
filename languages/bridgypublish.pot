@@ -1,13 +1,9 @@
 #: ./Pages/Admin.php:17
-msgid "BridgyPublish"
+msgid "Bridgy Publish"
 msgstr ""
 
 #: ./Pages/Admin.php:41
 msgid "%s doesn't seem to be a valid URL."
-msgstr ""
-
-#: ./templates/default/bridgypublish/admin/home.tpl.php:6
-msgid "Bridgy Publish"
 msgstr ""
 
 #: ./templates/default/bridgypublish/admin/home.tpl.php:9

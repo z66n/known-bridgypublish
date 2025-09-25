@@ -14,7 +14,7 @@ namespace IdnoPlugins\BridgyPublish\Pages
             $this->adminGatekeeper();
             $t = \Idno\Core\Idno::site()->template();
             $body = $t->draw('bridgypublish/admin/home');
-            $t->__(array('title' => \Idno\Core\Idno::site()->language()->_('BridgyPublish'), 'body' => $body))->drawPage();
+            $t->__(array('title' => \Idno\Core\Idno::site()->language()->_('Bridgy Publish'), 'body' => $body))->drawPage();
 
         }
 
