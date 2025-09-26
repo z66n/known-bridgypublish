@@ -1,7 +1,7 @@
 Bridgy Publish for Known
 ==================
 
-This plugin provides syndication support for Known to Bridgy Publish via webmentions.
+This Known plugin provides syndication support to Bridgy Publish via Webmentions.
 
 Installation
 ------------

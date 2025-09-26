@@ -6,7 +6,7 @@
         <h1><?php echo \Idno\Core\Idno::site()->language()->_('Bridgy Publish'); ?></h1>
 
         <p class="explanation">
-            <?php echo \Idno\Core\Idno::site()->language()->_('Bridgy Publish lets you syndicate content to external applications using webmentions.'); ?>
+            <?php echo \Idno\Core\Idno::site()->language()->_('Bridgy Publish lets you syndicate content to external applications using Webmentions.'); ?>
         </p>
         <p class="explanation">
             <a href="https://brid.gy/about#publishing"><?php echo \Idno\Core\Idno::site()->language()->_('Bridgy Publish'); ?></a>
@@ -15,7 +15,7 @@
             <?php echo \Idno\Core\Idno::site()->language()->_(') that Bridgy detects and uses to publish your content to the selected site.'); ?>
         </p>
         <p class="explanation">
-            <?php echo \Idno\Core\Idno::site()->language()->_('To learn more about Bridgy Publish with webmentions, read the');?> <a href="https://brid.gy/about#webmentions"><?php echo \Idno\Core\Idno::site()->language()->_('Bridgy Help Page'); ?></a>.
+            <?php echo \Idno\Core\Idno::site()->language()->_('To learn more about Bridgy Publish with Webmentions, read the');?> <a href="https://brid.gy/about#webmentions"><?php echo \Idno\Core\Idno::site()->language()->_('Bridgy Help Page'); ?></a>.
         </p>
 
     </div>
