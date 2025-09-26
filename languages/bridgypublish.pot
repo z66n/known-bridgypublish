@@ -7,7 +7,7 @@ msgid "%s doesn't seem to be a valid URL."
 msgstr ""
 
 #: ./templates/default/bridgypublish/admin/home.tpl.php:9
-msgid "Bridgy Publish lets you syndicate content to external applications using webmentions."
+msgid "Bridgy Publish lets you syndicate content to external applications using Webmentions."
 msgstr ""
 
 #: ./templates/default/bridgypublish/admin/home.tpl.php:13
@@ -19,7 +19,7 @@ msgid ") that Bridgy detects and uses to publish your content to the selected si
 msgstr ""
 
 #: ./templates/default/bridgypublish/admin/home.tpl.php:18
-msgid "To learn more about Bridgy Publish with webmentions, read the"
+msgid "To learn more about Bridgy Publish with Webmentions, read the"
 msgstr ""
 
 #: ./templates/default/bridgypublish/admin/home.tpl.php:18
